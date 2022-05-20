@@ -17,7 +17,7 @@ const Background: NextPage<BackgroundProps> = props => {
         <div className={styles.popup}>
             {toggled &&
                 <div className={styles.popup_content}>
-                    <button className={styles.close_button}>
+                    <button className={styles.close_button} onClick={() => setToggled(false)}>
                         <span aria-hidden="true" className={styles.close_span} onClick={() => setToggled(false)}> 
                             &times;
                         </span>
