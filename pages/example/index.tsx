@@ -6,7 +6,7 @@ import BackgroundComponent from "../../components/backgroundComponent";
 const MainContent: NextPage = () => {
   return (
     <div className="">
-        <BackgroundComponent header="test" description="testing"/>
+        <BackgroundComponent header="Header here" description="Description here"/>
         {/* <ExampleComponent/> */}
 
     </div>

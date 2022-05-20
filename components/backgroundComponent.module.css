@@ -16,21 +16,31 @@
     border: 2px solid black;
 }
 
-h1.header {
+.header {
 
 }
 
-h3.description {
+.description {
 
 }
 
-.close {
+.close_button {
+
+}
+
+.close_span {
     color: Black;
     float: right;
 }
   
-.close:hover {
-    color: cyan;
+.close_span:hover {
+    color: red;
     cursor: pointer;
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: black;
 }
   

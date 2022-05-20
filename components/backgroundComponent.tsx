@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import { useState } from 'react';
 import styles from "./backgroundComponent.module.css";
+
+// Type definition for the props that are being passed in
 interface BackgroundProps {
     header: string,
     description: string
@@ -15,11 +17,14 @@ const Background: NextPage<BackgroundProps> = props => {
         <div className={styles.popup}>
             {toggled &&
                 <div className={styles.popup_content}>
-                     <span className="close" onClick={() => setToggled(false)}> 
-                        &times;
-                    </span>
-                    <h1 className="header">{ header }</h1>
-                    <h3 className="description">{ description }</h3>
+                    <button className={styles.close_button}>
+                        <span aria-hidden="true" className={styles.close_span} onClick={() => setToggled(false)}> 
+                            &times;
+                        </span>
+                    </button>
+                    <h1 className={styles.header}>{header}</h1>
+                    <hr className={styles.separator}/>
+                    <h3 className={styles.description}>{description}</h3>
                 </div>
             }
 
