@@ -24,5 +24,4 @@ const clientCredentials = {
 
 export default function initFirebase() {
   const app = initializeApp(clientCredentials);
-  const db = getFirestore(app);
 }
