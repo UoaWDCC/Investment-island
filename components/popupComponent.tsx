@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
 import { ReactElement, useState } from 'react';
-import styles from "./backgroundComponent.module.css";
+import styles from "./popupComponent.module.css";
 
 // Type definition for the props that are being passed in
 interface PopupProps {
     header: string,
-    description: string,
+    description?: string,
     content?: ReactElement
 }
 
