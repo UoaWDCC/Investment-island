@@ -3,14 +3,14 @@ import { ReactElement, useState } from 'react';
 import styles from "./backgroundComponent.module.css";
 
 // Type definition for the props that are being passed in
-interface BackgroundProps {
+interface PopupProps {
     header: string,
     description: string,
     content?: ReactElement
 }
 
 // Background popup for investment island 
-const Background: NextPage<BackgroundProps> = props => {
+const Popup: NextPage<PopupProps> = props => {
     const { header, description, content } = props;
     const [toggled, setToggled] = useState(false);
 
@@ -25,7 +25,7 @@ const Background: NextPage<BackgroundProps> = props => {
                     </button>
                     <h1 className={styles.header}>{header}</h1>
                     <hr className={styles.separator}/>
-                    <h3 className={styles.description}>{description}</h3>
+                    <p className={styles.description}>{description}</p>
                     {content}
                 </div>
             }
@@ -38,4 +38,4 @@ const Background: NextPage<BackgroundProps> = props => {
     );
 }
 
-export default Background;
+export default Popup;
