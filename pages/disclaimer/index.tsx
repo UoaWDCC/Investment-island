@@ -5,20 +5,23 @@ import Disclaimer from "../../components/popupComponent";
 
 const InfoPage: NextPage = () => {
   const content = (
-    <span>
+    <div>
       <Link href="/">
         <a>Previous</a>
       </Link>
-      <Link href="/login">
-        <a>Continue with Google</a>
-      </Link>
-      <Link href="/login">
-        <a>Continue with Facebook</a>
-      </Link>
-      <Link href="/login">
-        <a>Continue with Email</a>
-      </Link>
-    </span>
+
+      <span className={styles.logins}>
+        <Link href="/login">
+          <a className={styles.link}>Continue with Google</a>
+        </Link>
+        <Link href="/login">
+          <a className={styles.link}>Continue with Facebook</a>
+        </Link>
+        <Link href="/login">
+          <a className={styles.link}>Continue with Email</a>
+        </Link>
+      </span>
+    </div>
   );
 
   return (

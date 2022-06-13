@@ -12,13 +12,19 @@ const LoginPage: NextPage = () => {
 
         <h3>Enter your password</h3>
         <input type="text" name="password" />
-        <br />
 
-        <Link href="/disclaimer">
-          <a>Previous</a>
-        </Link>
-        <button onClick={(event) => event.preventDefault()}>Login</button>
-        <button onClick={(event) => event.preventDefault()}>Register</button>
+        <div className={styles.links}>
+          <Link href="/disclaimer">
+            <a>Previous</a>
+          </Link>
+
+          <span className={styles.user_links}>
+            <button onClick={(event) => event.preventDefault()}>Login</button>
+            <button onClick={(event) => event.preventDefault()}>
+              Register
+            </button>
+          </span>
+        </div>
       </form>
     </div>
   );
