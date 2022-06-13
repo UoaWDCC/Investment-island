@@ -6,13 +6,14 @@ import styles from "./popupComponent.module.css";
 interface PopupProps {
     header: string,
     description?: string,
-    content?: ReactElement
+    content?: ReactElement,
+    initialToggled?: boolean
 }
 
 // Background popup for investment island 
 const Popup: NextPage<PopupProps> = props => {
-    const { header, description, content } = props;
-    const [toggled, setToggled] = useState(false);
+    const { header, description, content, initialToggled } = props;
+    const [toggled, setToggled] = useState(initialToggled || false);
 
     return ( 
         <div className={styles.popup}>

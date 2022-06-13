@@ -5,6 +5,9 @@ import Disclaimer from "../../components/popupComponent";
 const InfoPage: NextPage = () => {
   const content = (
     <span>
+      <Link href="/">
+        <a>Previous</a>
+      </Link>
       <Link href="/login">
         <a>Continue with Google</a>
       </Link>
@@ -23,6 +26,7 @@ const InfoPage: NextPage = () => {
         header="Disclaimer"
         description="Disclaimer text"
         content={content}
+        initialToggled={true}
       />
     </div>
   );
