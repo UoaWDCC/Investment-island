@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import styles from "./login.module.css";
 import Link from "next/link";
 import LoginPopup from "../../components/popupComponent";
 

@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import styles from "./disclaimer.module.css";
 import Link from "next/link";
 import Disclaimer from "../../components/popupComponent";
 
