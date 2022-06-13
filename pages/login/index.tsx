@@ -8,10 +8,10 @@ const LoginPage: NextPage = () => {
     <div>
       <form>
         <h3>Enter your email</h3>
-        <input type="text" name="email" />
+        <input type="text" name="email" placeholder="bob@gmail.com" required/>
 
         <h3>Enter your password</h3>
-        <input type="text" name="password" />
+        <input type="text" name="password" placeholder="12345" required/>
 
         <div className={styles.links}>
           <Link href="/disclaimer">
