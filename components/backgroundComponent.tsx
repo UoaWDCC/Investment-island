@@ -1,16 +1,17 @@
 import type { NextPage } from 'next'
-import { useState } from 'react';
+import { ReactElement, useState } from 'react';
 import styles from "./backgroundComponent.module.css";
 
 // Type definition for the props that are being passed in
 interface BackgroundProps {
     header: string,
-    description: string
+    description: string,
+    content?: ReactElement
 }
 
 // Background popup for investment island 
 const Background: NextPage<BackgroundProps> = props => {
-    const { header, description } = props;
+    const { header, description, content } = props;
     const [toggled, setToggled] = useState(false);
 
     return ( 
@@ -25,12 +26,14 @@ const Background: NextPage<BackgroundProps> = props => {
                     <h1 className={styles.header}>{header}</h1>
                     <hr className={styles.separator}/>
                     <h3 className={styles.description}>{description}</h3>
+                    {content}
                 </div>
             }
 
             {!toggled && 
                 <button onClick={() => setToggled(!toggled)}>Click to toggle popup!</button>
-            }   
+            }
+               
         </div>
     );
 }
