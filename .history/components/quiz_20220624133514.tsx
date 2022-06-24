@@ -1,5 +1,3 @@
-/* Multiple-choice quiz */
-
 import React, { Component } from 'react';
 import { Button } from '@mui/material';
 import { Radio } from '@mui/material';
