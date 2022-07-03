@@ -31,7 +31,7 @@ const Home: NextPage = () => {
         />
       </div>
       <div>
-        { /* Make the placeholder grid here */}
+        {/* Make the placeholder grid here */}
       </div>
 
     </>
