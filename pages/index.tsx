@@ -1,8 +1,10 @@
 import type { NextPage } from "next";
+import { Grid } from '@mui/material';
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Welcome from "../components/popupComponent";
 import SignUpBox from "../components/SignUpBox";
+import HomeGridItem from "../components/HomeGridItem";
 
 // The main entry point
 const Home: NextPage = () => {
@@ -31,7 +33,27 @@ const Home: NextPage = () => {
         />
       </div>
       <div>
-        { /* Make the placeholder grid here */}
+        <HomeGridItem 
+          section="Time Tundra"
+          module1="Interest rates, and terms"
+          module2="Managed funds (including retirement funds)"
+          module3="Bonds (govt bonds, company bonds, bond maturity dates)"
+          module4="Review"
+         />
+         <HomeGridItem 
+          section="Time Tundra"
+          module1="Interest rates, and terms"
+          module2="Managed funds (including retirement funds)"
+          module3="Bonds (govt bonds, company bonds, bond maturity dates)"
+          module4="Review"
+         />
+         <HomeGridItem 
+          section="Time Tundra"
+          module1="Interest rates, and terms"
+          module2="Managed funds (including retirement funds)"
+          module3="Bonds (govt bonds, company bonds, bond maturity dates)"
+          module4="Review"
+         />
       </div>
 
     </>
