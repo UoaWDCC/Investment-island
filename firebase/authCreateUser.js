@@ -4,6 +4,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   FacebookAuthProvider,
+  firebase,
   signInWithRedirect,
 } from "firebase/auth";
 
@@ -23,6 +24,7 @@ export async function createUserGoogle() {
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
     await signInWithPopup(auth, googleProvider);
+    return true;
   } catch (e) {
     console.log(e);
     return false;
@@ -34,6 +36,7 @@ export async function createFacebookUser() {
     const auth = getAuth();
     const facebookProvider = new FacebookAuthProvider();
     signInWithPopup(auth, facebookProvider);
+    return true;
   } catch (e) {
     console.log(e);
     return false;
