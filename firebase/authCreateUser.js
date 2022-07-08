@@ -4,14 +4,8 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   FacebookAuthProvider,
-  signInWithRedirect
+  signInWithRedirect,
 } from "firebase/auth";
-
-export async function createUserGoogle() {
-  const auth = getAuth();
-  const googleProvider = new GoogleAuthProvider();
-  const credentials = await signInWithPopup(auth, googleProvider);
-}
 
 export default async function createUser(email, password) {
   try {
@@ -24,10 +18,24 @@ export default async function createUser(email, password) {
   }
 }
 
-export async function createFacebookUser() {
-  const auth = getAuth();
-  const facebookProvider = new FacebookAuthProvider();
-  const credentials = signInWithPopup(auth, facebookProvider);
-
+export async function createUserGoogle() {
+  try {
+    const auth = getAuth();
+    const googleProvider = new GoogleAuthProvider();
+    await signInWithPopup(auth, googleProvider);
+  } catch (e) {
+    console.log(e);
+    return false;
+  }
 }
 
+export async function createFacebookUser() {
+  try {
+    const auth = getAuth();
+    const facebookProvider = new FacebookAuthProvider();
+    signInWithPopup(auth, facebookProvider);
+  } catch (e) {
+    console.log(e);
+    return false;
+  }
+}
