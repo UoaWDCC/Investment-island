@@ -21,19 +21,19 @@ class HomeGridItem extends Component<HomeGridItemProps> {
         <h1>{ section }</h1>
         <Grid container spacing={2}>
         <Grid item xs={3} style={{background: 'blue'}}>
-            <h2>{ module1 }</h2>
+            <h4>{ module1 }</h4>
             <Button variant="contained">Go</Button>
         </Grid>
         <Grid item xs={3} style={{background: 'red'}}>
-            <h2>{ module2 }</h2>
+            <h4>{ module2 }</h4>
             <Button variant="contained">Go</Button>
         </Grid>
         <Grid item xs={3} style={{background: 'blue'}}>
-            <h2>{ module3 }</h2>
+            <h4>{ module3 }</h4>
             <Button variant="contained">Go</Button>
         </Grid>
         <Grid item xs={3} style={{background: 'red'}}>
-            <h2>{ module4 }</h2>
+            <h4>{ module4 }</h4>
             <Button variant="contained">Go</Button>
         </Grid>
         </Grid>

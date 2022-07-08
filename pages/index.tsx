@@ -54,6 +54,34 @@ const Home: NextPage = () => {
           module3="Bonds (govt bonds, company bonds, bond maturity dates)"
           module4="Review"
          />
+         <HomeGridItem 
+          section="Time Tundra"
+          module1="Interest rates, and terms"
+          module2="Managed funds (including retirement funds)"
+          module3="Bonds (govt bonds, company bonds, bond maturity dates)"
+          module4="Review"
+         />
+         <HomeGridItem 
+          section="Time Tundra"
+          module1="Interest rates, and terms"
+          module2="Managed funds (including retirement funds)"
+          module3="Bonds (govt bonds, company bonds, bond maturity dates)"
+          module4="Review"
+         />
+         <HomeGridItem 
+          section="Time Tundra"
+          module1="Interest rates, and terms"
+          module2="Managed funds (including retirement funds)"
+          module3="Bonds (govt bonds, company bonds, bond maturity dates)"
+          module4="Review"
+         />
+         <HomeGridItem 
+          section="Time Tundra"
+          module1="Interest rates, and terms"
+          module2="Managed funds (including retirement funds)"
+          module3="Bonds (govt bonds, company bonds, bond maturity dates)"
+          module4="Review"
+         />
       </div>
 
     </>

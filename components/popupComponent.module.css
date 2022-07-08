@@ -1,7 +1,7 @@
 /* Styling for the pop up component - we will probably want to move this / redo all styling later */
 
 .popup {
-    position: fixed;
+    /*position: fixed;*/
     z-index: 1;
     width: 100%;
     height: 100%;
