@@ -3,6 +3,8 @@ import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
+  FacebookAuthProvider,
+  signInWithRedirect
 } from "firebase/auth";
 
 export async function createUserGoogle() {
@@ -21,3 +23,11 @@ export default async function createUser(email, password) {
     return false;
   }
 }
+
+export async function createFacebookUser() {
+  const auth = getAuth();
+  const facebookProvider = new FacebookAuthProvider();
+  const credentials = signInWithPopup(auth, facebookProvider);
+
+}
+

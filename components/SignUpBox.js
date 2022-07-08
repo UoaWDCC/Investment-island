@@ -2,7 +2,7 @@ import { FirebaseError } from "firebase/app";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import createUser, { createUserGoogle } from "../firebase/authCreateUser";
+import createUser, { createFacebookUser, createUserGoogle } from "../firebase/authCreateUser";
 import { useState } from "react";
 
 export default function SignUpBox() {
@@ -45,6 +45,15 @@ export default function SignUpBox() {
         }}
       >
         Sign Up With Google
+      </button>
+      <br>
+      </br>
+      <button
+        onClick={() => {
+          createFacebookUser();
+        }}
+      >
+        Sign Up With Facebook
       </button>
     </div>
   );
