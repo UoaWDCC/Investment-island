@@ -55,6 +55,14 @@ export default function SignUpBox() {
       >
         Sign Up With Facebook
       </button>
+      <br />
+      <button
+        onClick={() => {
+          userSignout();
+        }}
+      >
+        Sign Out
+      </button>
     </div>
   );
 }
