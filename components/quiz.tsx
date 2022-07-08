@@ -6,8 +6,8 @@ import { Radio } from '@mui/material';
 import styles from './quiz.module.css'
 
 interface QuizProps {
-  question_number: number;
-  question: string;
+  question_number: number,
+  question: string
 }
 
 class Quiz extends Component<QuizProps> {
