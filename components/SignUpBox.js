@@ -1,15 +1,17 @@
-import { createUser, 
-  createFacebookUser,
-  createUserGoogle,
-} from "../firebase/userSignUp";
-import userSignOut from "../firebase/userSignOut"
+import {
+  userSignUp,
+  userSignIn,
+  googleSignIn,
+  facebookSignIn,
+} from "../firebase/userSignIn";
+import userSignOut from "../firebase/userSignOut";
 import { useState } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 export default function SignUpBox() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [userId, setUserId] = useState("")
+  const [userId, setUserId] = useState("");
 
   const isSignedIn = () => {
     const auth = getAuth();
@@ -21,12 +23,19 @@ export default function SignUpBox() {
       }
     });
 
-    return <div>{userId ? `User ${userId} is signed in ` : 'not signed in'}</div>
-  }
+    return (
+      <div>{userId ? `User ${userId} is signed in ` : "not signed in"}</div>
+    );
+  };
 
+  const handleSignUp = () => {
+    userSignUp(email, password);
+    setEmail("");
+    setPassword("");
+  };
 
   const handleSignIn = () => {
-    createUser(email, password);
+    userSignIn(email, password);
     setEmail("");
     setPassword("");
   };
@@ -53,22 +62,27 @@ export default function SignUpBox() {
         value={password}
       />
       <br />
-      <button onClick={handleSignIn}>Sign Up</button>
+      <button onClick={handleSignUp}>Sign Up</button>
+      <button onClick={handleSignIn}>Sign In</button>
       <button
         onClick={() => {
-          createUserGoogle();
+          googleSignIn();
         }}
       >
         Sign In With Google
       </button>
       <button
         onClick={() => {
-          createFacebookUser();
+          facebookSignIn();
         }}
       >
         Sign In With Facebook
       </button>
-      <button onClick={() => {userSignOut()}}>
+      <button
+        onClick={() => {
+          userSignOut();
+        }}
+      >
         Log out
       </button>
       {isSignedIn()}
