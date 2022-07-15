@@ -14,6 +14,7 @@ interface PopupProps {
 const Popup: NextPage<PopupProps> = props => {
     const { header, description, content, initialToggled } = props;
     const [toggled, setToggled] = useState(initialToggled || false);
+    console.log(content);
 
     return ( 
         <div className={styles.popup}>
@@ -31,7 +32,7 @@ const Popup: NextPage<PopupProps> = props => {
                 </div>
             }
 
-            {!toggled && 
+            {
                 <button onClick={() => setToggled(!toggled)}>Click to toggle popup!</button>
             }
                
