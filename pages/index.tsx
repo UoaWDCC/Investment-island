@@ -2,13 +2,19 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Welcome from "../components/popupComponent";
+import Button from "@material-ui/core/Button";
 
 // The main entry point
 const Home: NextPage = () => {
   const content = (
+    <>
     <Link href="/disclaimer">
       <a>Next</a>
     </Link>
+
+    <Button variant="text">Text</Button>
+    </>
+
   );
 
   return (
