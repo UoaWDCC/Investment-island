@@ -1,16 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { async } from "@firebase/util";
-import {
-  collection,
-  doc,
-  setDoc,
-  getDoc,
-  getFirestore,
-  getDocs,
-} from "firebase/firestore";
-import { useState } from "react";
-import "firebase/storage";
-import "firebase/analytics";
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 const clientCredentials = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -23,5 +13,7 @@ const clientCredentials = {
 };
 
 export default function initFirebase() {
-  const app = initializeApp(clientCredentials);
+  const firebaseApp = initializeApp(clientCredentials);
+  //const db = firebaseApp.firestore();
+  //const auth = firebase.auth();
 }

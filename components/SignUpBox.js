@@ -1,14 +1,10 @@
-import { FirebaseError } from "firebase/app";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import createUser, {
+import { createUser, 
   createFacebookUser,
   createUserGoogle,
-} from "../firebase/authCreateUser";
+} from "../firebase/userSignUp";
+import userSignOut from "../firebase/userSignOut"
 import { useState } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-
 
 export default function SignUpBox() {
   const [email, setEmail] = useState("");
@@ -71,6 +67,9 @@ export default function SignUpBox() {
         }}
       >
         Sign In With Facebook
+      </button>
+      <button onClick={() => {userSignOut()}}>
+        Log out
       </button>
       {isSignedIn()}
     </div>
