@@ -4,12 +4,9 @@
 }
 
 .user_links {
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
-}
-
-.register {
-    text-align: right;
-    float: right;
 }
 
 .social_login {
