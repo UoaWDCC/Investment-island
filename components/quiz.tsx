@@ -19,8 +19,6 @@ class Quiz extends Component<QuizProps> {
         <hr className={styles.divider}/>
         <p >{question}</p>
         <div className={styles.options_container}>
-          {/* <Radio value="(A)" /> */}
-          {/* <FormControlLabel value="(A)" className={styles.option_button} /> */}
           <Button className={styles.option_button} variant="outlined">(A)</Button>
           <Button className={styles.option_button} variant="outlined">(B)</Button>
           <Button className={styles.option_button} variant="outlined">(C)</Button>

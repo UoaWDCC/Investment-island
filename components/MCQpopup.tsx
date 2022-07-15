@@ -1,17 +1,18 @@
 import type { NextPage } from 'next'
 import { ReactElement, useState } from 'react';
-import styles from "./popupComponent.module.css";
+import { Button } from '@mui/material';
+import styles from "./MCQpopup.module.css";
 
 // Type definition for the props that are being passed in
-interface PopupProps {
+interface MCQprops {
     header: string,
     description?: string,
     content?: ReactElement,
-    initialToggled?: boolean
+    initialToggled?: boolean,
 }
 
 // Background popup for investment island 
-const Popup: NextPage<PopupProps> = props => {
+const MCQpopup: NextPage<MCQprops> = props => {
     const { header, description, content, initialToggled } = props;
     const [toggled, setToggled] = useState(initialToggled || false);
 
@@ -27,11 +28,21 @@ const Popup: NextPage<PopupProps> = props => {
                     <h1 className={styles.header}>{header}</h1>
                     <hr className={styles.separator}/>
                     <p className={styles.description}>{description}</p>
+                    <div className={styles.options_container}>
+                        <Button className={styles.option_button} variant="outlined">(A)</Button>
+                        <Button className={styles.option_button} variant="outlined">(B)</Button>
+                        <Button className={styles.option_button} variant="outlined">(C)</Button>
+                        <Button className={styles.option_button} variant="outlined">(D)</Button>
+                    </div>
+                    <div className={styles.nav_buttons_container}>
+                        <Button className={styles.nav_button}>Prev.</Button>
+                        <Button className={styles.nav_button}>Next</Button>
+                    </div>
                     {content}
                 </div>
             }
 
-            {!toggled &&
+            {
                 <button onClick={() => setToggled(!toggled)}>Click to toggle popup!</button>
             }
                
@@ -39,4 +50,4 @@ const Popup: NextPage<PopupProps> = props => {
     );
 }
 
-export default Popup;
+export default MCQpopup;

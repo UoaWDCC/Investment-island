@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { Grid } from '@mui/material';
 import { Button } from '@mui/material';
 import PopupButton from "../components/popupComponent";
+import MCQpopup from './MCQpopup';
 import styles from './quiz.module.css'
 
 interface HomeGridItemProps {
@@ -23,28 +24,28 @@ class HomeGridItem extends Component<HomeGridItemProps> {
         <Grid container spacing={2}>
         <Grid item xs={3} style={{background: 'blue'}}>
             <h4>{ module1 }</h4>
-            <PopupButton
+            <MCQpopup
               header={section}
               description={module1}
             />
         </Grid>
         <Grid item xs={3} style={{background: 'red'}}>
             <h4>{ module2 }</h4>
-            <PopupButton
+            <MCQpopup
               header={section}
               description={module2}
             />
         </Grid>
         <Grid item xs={3} style={{background: 'blue'}}>
             <h4>{ module3 }</h4>
-            <PopupButton
+            <MCQpopup
               header={section}
               description={module3}
             />
         </Grid>
         <Grid item xs={3} style={{background: 'red'}}>
             <h4>{ module4 }</h4>
-            <PopupButton
+            <MCQpopup
               header={section}
               description={module4}
             />

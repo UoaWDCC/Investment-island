@@ -1,0 +1,86 @@
+/* Temporary styling for the quiz component */
+
+.quiz {
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #FDFF85;
+}
+
+.divider {
+    background-color: black;
+    height: 0.5px;
+    border: none;
+    margin: 0 10%;
+}
+
+.options_container {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    padding: 0 40px;
+}
+
+.option_button {
+    flex-basis: 40%;
+    margin: 3px;
+    /* background-color: #E4E4E4; */
+}
+
+.nav_buttons_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling for the pop up component - we will probably want to move this / redo all styling later */
+
+.popup {
+    /*position: fixed;*/
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.popup_content {
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.header {
+
+}
+
+.description {
+
+}
+
+.close_button {
+
+}
+
+.close_span {
+    color: Black;
+    float: right;
+}
+  
+.close_span:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+  
